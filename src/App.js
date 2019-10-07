@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import './styles/style.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.component';
+import LoginForm from './components/LoginForm.component';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Router>
-        <Route path="/" component={Navbar} />
+        <Route path="/" component={LoginForm} />
       </Router>
     </div>
   );

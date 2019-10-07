@@ -11,7 +11,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <AppBar position="static">
+        <AppBar position="static" className="navbar">
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <MenuIcon />
