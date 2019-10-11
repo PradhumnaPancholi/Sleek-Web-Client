@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #004e98 !important;
+  color: #ebebeb !important;
 }
 
 /*This is a styles sheets for all the forms in the app*/
@@ -24,9 +24,6 @@
 }
 .login-content h5 {
   color: #3a6ea5;
-}
-.login-content .login-input {
-  color: red !important;
 }
 .login-content .login-input-props {
   color: #3a6ea5 !important;
