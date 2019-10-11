@@ -7,9 +7,9 @@ import { Button } from '@material-ui/core';
 class LoginForm extends Component{
     render() {
         return(
-            <div>
+            <div className="login-form">
                 <Card>
-                    <CardContent>
+                    <CardContent className="login-content">
                         <Typography variant="h5" component="h2">
                             Log Into Your Account
                         </Typography>
@@ -22,6 +22,10 @@ class LoginForm extends Component{
                                 autoComplete="email"
                                 margin="normal"
                                 variant="outlined"
+                                className="login-input"
+                                InputProps={{
+                                    className:"login-input-props"
+                                }}
                             />
                         </div>
                         <div>
@@ -32,6 +36,9 @@ class LoginForm extends Component{
                                 autoComplete="current-password"
                                 margin="normal"
                                 variant="outlined"
+                                InputProps={{
+                                    className:"login-input-props"
+                                }}
                             />
                         </div>
                         <div>
@@ -39,6 +46,9 @@ class LoginForm extends Component{
                                 Log In
                             </Button>
                         </div>
+                        <Typography variant="h10" component="h5">
+                            Don't have an account yet? Sign Up
+                        </Typography>
                     </CardContent>
                 </Card>
             </div>
