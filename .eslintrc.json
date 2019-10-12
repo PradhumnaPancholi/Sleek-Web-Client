@@ -21,10 +21,9 @@
         "react"
     ],
     "rules": {
-        "react/jsx-filename-extension" : [1, { "extensions": [".js"] }],
+        "react/jsx-filename-extension" : [1, { "extensions": [".js", ".tsx", ".ts"] }],
         "comma-dangle": "off",
         "no-trailing-spaces": "off",
-        "indent": 2,
-        "semi": "error"
+        "indent": 2
     }
 }
