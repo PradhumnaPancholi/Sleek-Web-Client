@@ -32,6 +32,17 @@
   color: green !important;
 }
 
+.avatar-picker {
+  height: 70%;
+  width: 40%;
+  background-color: #c0c0c0 !important;
+  color: #3a6ea5;
+  margin: auto;
+  margin-top: 25vh;
+  text-align: center;
+  border: 0px solid white;
+}
+
 /*Shared/common styles*/
 body {
   background-color: #c0c0c0 !important;
