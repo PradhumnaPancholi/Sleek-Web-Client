@@ -4,31 +4,31 @@
 
 /*This is a styles sheets for all the forms in the app*/
 /*Login Form*/
-.login-form {
-  margin-top: 10vh;
+.login-form, .signup-form {
+  margin-top: 8vh;
   margin-left: auto !important;
   margin-right: auto !important;
   width: 35% !important;
   text-align: center;
 }
 
-.login-content h2 {
+.login-content h2, .signup-content h2 {
   padding: 5%;
   color: #3a6ea5;
   font-size: 28px;
 }
-.login-content button {
+.login-content button, .signup-content button {
   margin: 5%;
   background-color: #3a6ea5;
   color: #ebebeb;
 }
-.login-content h5 {
+.login-content h5, .signup-content h5 {
   color: #3a6ea5;
 }
-.login-content .login-input-props {
+.login-content .login-input-props, .login-content .signup-input-props, .signup-content .login-input-props, .signup-content .signup-input-props {
   color: #3a6ea5 !important;
 }
-.login-content .login-input-props::placeholder {
+.login-content .login-input-props::placeholder, .login-content .signup-input-props::placeholder, .signup-content .login-input-props::placeholder, .signup-content .signup-input-props::placeholder {
   color: green !important;
 }
 
