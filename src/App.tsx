@@ -3,6 +3,7 @@ import './styles/style.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.component';
 import LoginForm from './components/LoginForm.component';
+import SignUpForm from './components/SignUpForm.component';
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <div className='App'>
       <Navbar />
       <Router>
-        <Route path='/' component={LoginForm} />
+        <Route path='/signup' exact component={SignUpForm} />
+        <Route path='/' exact component={LoginForm} />
       </Router>
     </div>
   );
