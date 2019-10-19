@@ -1,16 +1,16 @@
 import React from 'react';
-import { GridList, GridListTile } from '@material-ui/core';
+import { GridList } from '@material-ui/core';
+import AvatarsListItem from './AvatarsListItem.component';
 
 export default function AvatarsList() {
     
-    const array = ['avatar01', 'avatar02', 'avatar03', 'avatar04', 'avatar05', 'avatar06', 'avatar07', 'avatar08', 'avatar09']
+    const avatars: string[] = ['avatar1', 'avatar2', 'avatar3', 'avatar4', 'avatar5', 'avatar6', 'avatar7', 'avatar8']
+    
     return(
         <div>
             <GridList cellHeight={160} cols={3}>
-                {array.map(item => (
-                    <GridListTile>
-                        <p>{item}</p>
-                    </GridListTile>
+                {avatars.map(avatar => (
+                    <AvatarsListItem avatar= {`../../public/avatars/${avatar}.png`}/>
                 ))}
             </GridList>
         </div>
