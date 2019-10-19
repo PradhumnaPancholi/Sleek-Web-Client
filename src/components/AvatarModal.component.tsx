@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from '@material-ui/core';
+import AvatarsList from './AvatarsList.component';
 
 export default function AvatarModal() {
 
@@ -12,7 +13,6 @@ export default function AvatarModal() {
     const handleClose = () => {
         setOpen(false)
     }
-    
     return(
         <div>
             <button type="button" onClick={handleOpen}>
@@ -27,9 +27,7 @@ export default function AvatarModal() {
             > 
                 <div className="avatar-picker">
                     <h2 className="avatar-picker-header">Choose Your Avatar</h2>
-                        <p className="avatar-picker-content">
-                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                        </p>
+                    <AvatarsList />
                 </div>
             </Modal>
         </div>
