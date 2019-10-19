@@ -40,7 +40,7 @@
   margin: auto;
   margin-top: 25vh;
   text-align: center;
-  border: 0px solid white;
+  border: 0px solid white !important;
 }
 
 /*Shared/common styles*/
