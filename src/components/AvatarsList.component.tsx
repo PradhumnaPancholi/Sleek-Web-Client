@@ -9,7 +9,7 @@ export default function AvatarsList() {
     
     return(
         <div>
-            <GridList cellHeight={160} cols={3}>
+            <GridList cellHeight={160}>
                 {avatars.map(avatar => (
                     <AvatarsListItem avatar= {`./avatars/${avatar}.png`}/>
                 ))}
