@@ -1,10 +1,25 @@
-import React, { Component } from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
-import { TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
+import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class LoginForm extends Component{
+
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            email :'',
+            password : ''
+        }
+    }
+
+    signIn = async () => {
+        console.log("agfej")
+    }
+
+    handleInputChanges = (key: string) => (e: any) => {
+        console.log('this is working')
+    }
     render() {
         return(
             <div className= 'login-form'>
@@ -19,6 +34,8 @@ class LoginForm extends Component{
                                 label='Email'
                                 type='email'
                                 name='email'
+                                value={this.state.email}
+                                onChange={this.handleInputChanges('email')}
                                 autoComplete='email'
                                 margin='normal'
                                 variant='outlined'
@@ -32,6 +49,7 @@ class LoginForm extends Component{
                                 id='outlined-password-input'
                                 label='Password'
                                 type='password'
+                                value={this.state.password}
                                 autoComplete='current-password'
                                 margin='normal'
                                 variant='outlined'
@@ -55,4 +73,4 @@ class LoginForm extends Component{
     }
 }
 
-export default LoginForm;
+export default connect((state => ({...state})))(LoginForm);

@@ -19,7 +19,7 @@ export const signInUser = (userEmail: string, userPassword: string) => {
 
 export const signInUserAction = ( userEmail: string, userPassword: string) => {
     return (dispatch: Dispatch<AppActions>, getState: () => AppState) => {
-
+        
     }
 }
     
