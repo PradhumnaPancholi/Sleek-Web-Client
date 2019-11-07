@@ -49,7 +49,7 @@
   background-color: #c0c0c0 !important;
   color: #3a6ea5;
   margin: auto;
-  margin-top: 25vh;
+  margin-top: 10vh;
   text-align: center;
   border: 0px solid white !important;
 }
@@ -58,6 +58,13 @@
   padding: 5%;
 }
 
+/*media queries*/
+@media screen and (max-width: 600px) {
+  .avatar-picker {
+    width: 85%;
+    margin-top: 2vh;
+  }
+}
 /*Shared/common styles*/
 body {
   background-color: #c0c0c0 !important;
