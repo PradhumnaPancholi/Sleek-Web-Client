@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
-import { TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
+import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
+import React, { Component } from 'react'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class LoginForm extends Component{
@@ -46,7 +44,7 @@ class LoginForm extends Component{
                             </Button>
                         </div>
                         <Typography variant='h6' component='h5'>
-                            Don't have an account yet? Sign Up
+                            Don't have an account yet? <a href='/signup'>Sign Up</a>
                         </Typography>
                     </CardContent>
                 </Card>
