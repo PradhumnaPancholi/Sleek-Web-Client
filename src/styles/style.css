@@ -32,6 +32,12 @@
   color: green !important;
 }
 
+/*media querries*/
+@media screen and (max-width: 600px) {
+  .login-form, .signup-form {
+    width: 80% !important;
+  }
+}
 .avatar-picker {
   height: 70%;
   width: 40%;
