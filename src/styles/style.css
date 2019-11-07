@@ -32,17 +32,39 @@
   color: green !important;
 }
 
+/*media querries*/
+@media screen and (max-width: 1000px) {
+  .login-form, .signup-form {
+    width: 65% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-form, .signup-form {
+    width: 80% !important;
+  }
+}
 .avatar-picker {
-  height: 70%;
-  width: 40%;
+  height: 100%;
+  width: 50%;
   background-color: #c0c0c0 !important;
   color: #3a6ea5;
   margin: auto;
-  margin-top: 25vh;
+  margin-top: 10vh;
   text-align: center;
   border: 0px solid white !important;
 }
 
+.avatar-picker-header {
+  padding: 5%;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+  .avatar-picker {
+    width: 85%;
+    margin-top: 2vh;
+  }
+}
 /*Shared/common styles*/
 body {
   background-color: #c0c0c0 !important;

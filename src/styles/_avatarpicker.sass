@@ -2,11 +2,22 @@ $primary: #3a6ea5
 $secondary: #c0c0c0
     
 .avatar-picker
-    height: 70%
-    width: 40%
+    height: 100%
+    width: 50%
     background-color: $secondary !important
     color: $primary
     margin: auto
-    margin-top: 25vh
+    margin-top: 10vh
     text-align: center
     border: 0px solid white !important
+
+.avatar-picker-header
+    padding: 5%
+
+
+/*media queries*/
+@media screen and ( max-width: 600px )
+    .avatar-picker
+        width: 85% 
+        margin-top: 2vh
+    
