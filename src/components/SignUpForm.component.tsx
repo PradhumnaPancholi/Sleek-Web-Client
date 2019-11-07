@@ -1,8 +1,7 @@
+import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { Component } from 'react'
-import { Card, CardContent, Typography } from '@material-ui/core';
-import { TextField } from '@material-ui/core';
-import { Button } from '@material-ui/core';
-import AvatarModal from './AvatarModal.component';
+
+import AvatarModal from './AvatarModal.component'
 
 class SignUpForm extends Component{
     render(){
@@ -63,7 +62,7 @@ class SignUpForm extends Component{
                             </Button>
                         </div>
                         <Typography variant='h6' component='h5'>
-                            Already have an account? Sign In
+                            Already have an account? <a href='/'>Sign In</a>
                         </Typography>
                     </CardContent>
                 </Card>
