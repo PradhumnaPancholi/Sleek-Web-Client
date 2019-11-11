@@ -11,7 +11,7 @@ export default function AvatarsList() {
         <div>
             <Grid container>
                 {avatars.map(avatar => (
-                    <AvatarsListItem avatar= {`./avatars/${avatar}.png`}/>
+                    <AvatarsListItem avatar = {`./avatars/${avatar}.png`}/>
                 ))}
             </Grid>
         </div>
