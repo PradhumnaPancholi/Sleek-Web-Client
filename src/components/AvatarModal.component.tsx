@@ -15,10 +15,6 @@ export default function AvatarModal() {
         setOpen(false)
     }
 
-    //method to handle selected avatar//
-    const handleAvatarSelection = () => {
-        console.log('this worked')
-    }
     return(
         <div>
             <button type="button" onClick={handleOpen}>

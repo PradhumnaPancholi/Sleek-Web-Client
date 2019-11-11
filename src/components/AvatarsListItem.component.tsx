@@ -9,7 +9,7 @@ const AvatarsListItem = ({avatar}: any) => {
     return(
         <Grid item lg={4} md sm xs>
             <div className='avatar-container' onClick = {(e) => handleAvatarSelection(avatar)}>
-                <img src={`./avatars/${avatar}.png`} alt={avatar}/>
+                <img key={avatar} src={`./avatars/${avatar}.png`} alt={avatar}/>
             </div>
         </Grid>
     )
