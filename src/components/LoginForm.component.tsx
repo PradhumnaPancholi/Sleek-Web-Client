@@ -64,7 +64,7 @@ class LoginForm extends Component{
                             </Button>
                         </div>
                         <Typography variant='h6' component='h5'>
-                            Don't have an account yet? Sign Up
+                            Don't have an account yet? <a href='/signup'>Sign Up</a>
                         </Typography>
                     </CardContent>
                 </Card>

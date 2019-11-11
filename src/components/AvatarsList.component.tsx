@@ -1,4 +1,4 @@
-import { GridList } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import React from 'react'
 
 import AvatarsListItem from './AvatarsListItem.component'
@@ -9,11 +9,11 @@ export default function AvatarsList() {
     
     return(
         <div>
-            <GridList cellHeight={160}>
+            <Grid container>
                 {avatars.map(avatar => (
-                    <AvatarsListItem avatar= {`./avatars/${avatar}.png`}/>
+                    <AvatarsListItem avatar = {avatar}/>
                 ))}
-            </GridList>
+            </Grid>
         </div>
     )
 }
