@@ -14,6 +14,7 @@ export default function AvatarModal() {
     const handleClose = () => {
         setOpen(false)
     }
+
     return(
         <div>
             <button type="button" onClick={handleOpen}>
