@@ -1,8 +1,32 @@
 import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { Component } from 'react'
 
+//interface for state//
+interface IState{
+    [key: string]: string
+}
+
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginForm extends Component{
+class LoginForm extends Component<{}, IState>{
+
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            email: '',
+            password: ''
+        }
+    }
+
+    signIn = async () => {
+        console.log("this is from sign in")
+    }
+
+    handleInputChanges = (key: string) => (e: any) => {
+        this.setState({ 
+             [key] : e.target.value
+        })
+    }
+    
     render() {
         return(
             <div className= 'login-form'>
@@ -17,6 +41,8 @@ class LoginForm extends Component{
                                 label='Email'
                                 type='email'
                                 name='email'
+                                value={this.state.email}
+                                onChange={this.handleInputChanges('email')}
                                 autoComplete='email'
                                 margin='normal'
                                 variant='outlined'
@@ -30,6 +56,8 @@ class LoginForm extends Component{
                                 id='outlined-password-input'
                                 label='Password'
                                 type='password'
+                                value={this.state.password}
+                                onChange={this.handleInputChanges('password')}
                                 autoComplete='current-password'
                                 margin='normal'
                                 variant='outlined'

@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from './User'
 
 export const LOG_IN_USER: string = 'LOGIN_USER'
 export const LOG_OUT_USER: string = 'LOGOUT_USER'
@@ -7,7 +7,8 @@ export const FETCH_USER_DATA: string = 'FETCH_USER_DATA'
 
 export interface LogInUserAction {
     type: typeof LOG_IN_USER
-    user: User
+    userEmail: string
+    userPassword: string
 }
 
 export interface LogOutUserAction {
