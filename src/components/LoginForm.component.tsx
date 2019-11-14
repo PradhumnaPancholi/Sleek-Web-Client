@@ -1,25 +1,32 @@
 import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+
+//interface for state//
+interface IState{
+    [key: string]: string
+}
 
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginForm extends Component{
+class LoginForm extends Component<{}, IState>{
 
     constructor(props: any) {
         super(props)
         this.state = {
-            email :'',
-            password : ''
+            email: '',
+            password: ''
         }
     }
 
     signIn = async () => {
-        console.log("agfej")
+        console.log("this is from sign in")
     }
 
     handleInputChanges = (key: string) => (e: any) => {
-        console.log('this is working')
+        this.setState({ 
+             [key] : e.target.value
+        })
     }
+    
     render() {
         return(
             <div className= 'login-form'>
@@ -50,6 +57,7 @@ class LoginForm extends Component{
                                 label='Password'
                                 type='password'
                                 value={this.state.password}
+                                onChange={this.handleInputChanges('password')}
                                 autoComplete='current-password'
                                 margin='normal'
                                 variant='outlined'
@@ -73,4 +81,4 @@ class LoginForm extends Component{
     }
 }
 
-export default connect((state => ({...state})))(LoginForm);
+export default LoginForm;
