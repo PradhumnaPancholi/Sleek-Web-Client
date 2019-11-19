@@ -1,5 +1,8 @@
 import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { signInUserAction } from '../actions/user.actions'
 
 //interface for state//
 interface IState{
@@ -19,6 +22,7 @@ class LoginForm extends Component<{}, IState>{
 
     signIn = async () => {
         console.log("this is from sign in")
+        // this.props.signInUserAction()
     }
 
     handleInputChanges = (key: string) => (e: any) => {
@@ -81,4 +85,9 @@ class LoginForm extends Component<{}, IState>{
     }
 }
 
-export default LoginForm;
+const mapStateToProps = (state: any ) => ({
+    user: state.user
+})
+
+
+export default connect(mapStateToProps, { signInUserAction })(LoginForm);
