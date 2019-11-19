@@ -85,7 +85,7 @@ class LoginForm extends Component<{}, IState>{
     }
 }
 
-const mapStateToProps = (state: any ) => ({
+const mapStateToProps = (state: any) => ({
     user: state.user
 })
 
