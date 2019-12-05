@@ -5,12 +5,13 @@ import { connect } from 'react-redux'
 import { signInUserAction } from '../actions/user.actions'
 
 //interface for state//
-interface IState{
-    [key: string]: string
+interface LoginFormState{
+    email: string
+    password: string
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginForm extends Component<{}, IState>{
+class LoginForm extends Component<{}, LoginFormState>{
 
     constructor(props: any) {
         super(props)
@@ -27,7 +28,7 @@ class LoginForm extends Component<{}, IState>{
 
     handleInputChanges = (key: string) => (e: any) => {
         this.setState({ 
-             [key] : e.target.value
+            //  key: e.target.value
         })
     }
     
