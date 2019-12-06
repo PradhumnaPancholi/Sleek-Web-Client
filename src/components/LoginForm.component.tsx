@@ -11,7 +11,7 @@ interface LoginFormState{
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginForm extends Component<{}, LoginFormState>{
+class LoginForm extends Component<{}, Partial<LoginFormState>>{
 
     constructor(props: any) {
         super(props)
@@ -26,13 +26,15 @@ class LoginForm extends Component<{}, LoginFormState>{
         // this.props.signInUserAction()
     }
 
-    handleInputChanges = (key: string) => (e: any) => {
+    handleInputChanges = (e: any) => {
+        const {name, value} = e.target
         this.setState({ 
-            //  key: e.target.value
+            [name]: value
         })
     }
     
     render() {
+        const { email, password } = this.state
         return(
             <div className= 'login-form'>
                 <Card>
@@ -46,8 +48,8 @@ class LoginForm extends Component<{}, LoginFormState>{
                                 label='Email'
                                 type='email'
                                 name='email'
-                                value={this.state.email}
-                                onChange={this.handleInputChanges('email')}
+                                value={email}
+                                onChange={this.handleInputChanges}
                                 autoComplete='email'
                                 margin='normal'
                                 variant='outlined'
@@ -61,8 +63,9 @@ class LoginForm extends Component<{}, LoginFormState>{
                                 id='outlined-password-input'
                                 label='Password'
                                 type='password'
-                                value={this.state.password}
-                                onChange={this.handleInputChanges('password')}
+                                name='password'
+                                value={password}
+                                onChange={this.handleInputChanges}
                                 autoComplete='current-password'
                                 margin='normal'
                                 variant='outlined'
