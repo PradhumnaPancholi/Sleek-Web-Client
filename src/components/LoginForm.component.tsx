@@ -5,12 +5,13 @@ import { connect } from 'react-redux'
 import { signInUserAction } from '../actions/user.actions'
 
 //interface for state//
-interface IState{
-    [key: string]: string
+interface LoginFormState{
+    email: string
+    password: string
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
-class LoginForm extends Component<{}, IState>{
+class LoginForm extends Component<{}, Partial<LoginFormState>>{
 
     constructor(props: any) {
         super(props)
@@ -25,13 +26,15 @@ class LoginForm extends Component<{}, IState>{
         // this.props.signInUserAction()
     }
 
-    handleInputChanges = (key: string) => (e: any) => {
+    handleInputChanges = (e: any) => {
+        const {name, value} = e.target
         this.setState({ 
-             [key] : e.target.value
+            [name]: value
         })
     }
     
     render() {
+        const { email, password } = this.state
         return(
             <div className= 'login-form'>
                 <Card>
@@ -45,8 +48,8 @@ class LoginForm extends Component<{}, IState>{
                                 label='Email'
                                 type='email'
                                 name='email'
-                                value={this.state.email}
-                                onChange={this.handleInputChanges('email')}
+                                value={email}
+                                onChange={this.handleInputChanges}
                                 autoComplete='email'
                                 margin='normal'
                                 variant='outlined'
@@ -60,8 +63,9 @@ class LoginForm extends Component<{}, IState>{
                                 id='outlined-password-input'
                                 label='Password'
                                 type='password'
-                                value={this.state.password}
-                                onChange={this.handleInputChanges('password')}
+                                name='password'
+                                value={password}
+                                onChange={this.handleInputChanges}
                                 autoComplete='current-password'
                                 margin='normal'
                                 variant='outlined'
