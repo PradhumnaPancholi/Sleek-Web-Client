@@ -21,14 +21,12 @@ const LoginForm: FunctionComponent = () => {
     })
     
     const signIn = async () => {
-        console.log("this is from sign in")
         // this.props.signInUserAction()
     }
 
     const handleInputChanges = (e: any) => {
-        console.log('from handleinputchanges')
-        const {name, value} = e.target
-        console.log(name, value)
+        let {name, value} = e.target
+        setCredentials(name => value)
     }
 
     return(
@@ -44,7 +42,7 @@ const LoginForm: FunctionComponent = () => {
                             label='Email'
                             type='email'
                             name='email'
-                            // value={credentials.email}
+                            value={credentials.email}
                             onChange={(e) => handleInputChanges(e)}
                             autoComplete='email'
                             margin='normal'
