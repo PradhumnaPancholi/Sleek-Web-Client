@@ -1,5 +1,6 @@
 import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import AvatarModal from './AvatarModal.component'
 
@@ -62,7 +63,7 @@ class SignUpForm extends Component{
                             </Button>
                         </div>
                         <Typography variant='h6' component='h5'>
-                            Already have an account? <a href='/'>Sign In</a>
+                            Already have an account? <NavLink to='/'>Sign In</NavLink>
                         </Typography>
                     </CardContent>
                 </Card>
