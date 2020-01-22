@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
 import React, { FunctionComponent, useState } from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 import { signInUserAction } from '../actions/user.actions'
 
@@ -25,8 +26,9 @@ const LoginForm: FunctionComponent = () => {
     }
 
     const handleInputChanges = (e: any) => {
+        console.log('from handleinputchanges')
         const {name, value} = e.target
-        // setState.name = value
+        console.log(name, value)
     }
 
     return(
@@ -42,8 +44,8 @@ const LoginForm: FunctionComponent = () => {
                             label='Email'
                             type='email'
                             name='email'
-                            value={credentials.email}
-                            onChange={this.handleInputChanges}
+                            // value={credentials.email}
+                            onChange={(e) => handleInputChanges(e)}
                             autoComplete='email'
                             margin='normal'
                             variant='outlined'
@@ -59,7 +61,7 @@ const LoginForm: FunctionComponent = () => {
                             type='password'
                             name='password'
                             value={credentials.password}
-                            onChange={this.handleInputChanges}
+                            onChange={(e) => handleInputChanges(e)}
                             autoComplete='current-password'
                             margin='normal'
                             variant='outlined'
@@ -74,7 +76,7 @@ const LoginForm: FunctionComponent = () => {
                         </Button>
                     </div>
                     <Typography variant='h6' component='h5'>
-                        Don't have an account yet? <a href='/signup'>Sign Up</a>
+                        Don't have an account yet? <NavLink to='/signup'>Sign Up</NavLink>
                     </Typography>
                 </CardContent>
             </Card>

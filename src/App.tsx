@@ -16,8 +16,8 @@ function App() {
       <Provider store={store}>
         <Navbar />
           <Router>
-            <Route path='/signup' exact component={SignUpForm} />
-            <Route path='/' exact component={LoginForm} />
+            <Route exact path='/' component={LoginForm} />
+            <Route path='/signup' component={SignUpForm} />
           </Router>
       </Provider>
     </div>
