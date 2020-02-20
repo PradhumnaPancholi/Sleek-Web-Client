@@ -4,9 +4,9 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import LoginForm from './components/LoginForm.component'
-import Navbar from './components/Navbar.component'
-import SignUpForm from './components/SignUpForm.component'
+import LoginForm from './components/auth/LoginForm.component'
+import SignUpForm from './components/auth/SignUpForm.component'
+import Navbar from './components/shared/Navbar.component'
 import { store } from './store/configureStore'
 
 function App() {

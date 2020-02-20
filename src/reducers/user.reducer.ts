@@ -1,4 +1,4 @@
-import { User } from '../types/User'
+import { User } from '../Entities/User'
 
 // a default state for user object//
 let userInitialState: User ={

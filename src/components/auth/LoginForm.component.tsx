@@ -3,8 +3,6 @@ import React, { FunctionComponent, useState } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-import { signInUserAction } from '../actions/user.actions'
-
 //interface for state//
 interface LoginFormState{
     email: string
@@ -87,4 +85,4 @@ const mapStateToProps = (state: any ) => ({
 })
 
 
-export default connect(mapStateToProps, { signInUserAction })(LoginForm);
+export default connect(mapStateToProps)(LoginForm);
