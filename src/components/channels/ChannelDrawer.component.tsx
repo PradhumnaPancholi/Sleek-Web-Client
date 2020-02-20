@@ -1,4 +1,4 @@
-import { Drawer, List, ListItem, ListItemText } from '@material-ui/core'
+import { Drawer, List, ListItem } from '@material-ui/core'
 import React, { FunctionComponent } from 'react'
 
 const ChannelDrawer: FunctionComponent = () => {
@@ -15,7 +15,7 @@ const ChannelDrawer: FunctionComponent = () => {
                 <List>
                     {channels.map((channel: string) => (
                         <ListItem key={channel}>
-                            <ListItemText primary={channel}/>
+                            <p>#{channel}</p>
                         </ListItem>
                     ))}
                 </List>
