@@ -1,4 +1,4 @@
-import { User } from '../types/User'
+import { User } from '../Entities/User'
 
 export const LOG_IN_USER: string = 'LOGIN_USER'
 export const LOG_OUT_USER: string = 'LOGOUT_USER'
