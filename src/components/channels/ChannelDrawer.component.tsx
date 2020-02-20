@@ -6,7 +6,7 @@ const ChannelDrawer: FunctionComponent = () => {
     //dummy channels list//
     let channels = ['channel 1', 'orgmode', 'marketting', 'development']
     return(
-        <div>
+        <div className='channel-drawer'>
             <Drawer
                 variant='permanent'
                 anchor='left'
