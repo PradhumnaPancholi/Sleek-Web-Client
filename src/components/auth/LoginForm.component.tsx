@@ -1,30 +1,14 @@
-import { Button, Card, CardContent, TextField, Typography } from '@material-ui/core'
+import { Button, Card, CardContent, Typography } from '@material-ui/core'
 import React, { FunctionComponent, useState } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-//interface for state//
-interface LoginFormState{
-    email: string
-    password: string 
-}
+import Input from '../layouts/Input.component'
 
-// eslint-disable-next-line react/prefer-stateless-function
-// const LoginForm: FunctionComponent<Partial<LoginFormState>> = () => {
 const LoginForm: FunctionComponent = () => {
-    
-    const [credentials , setCredentials] = useState<LoginFormState>({
-        email: '',
-        password: ''
-    })
     
     const signIn = async () => {
         // this.props.signInUserAction()
-    }
-
-    const handleInputChanges = (e: any) => {
-        let {name, value} = e.target
-        setCredentials(name => value)
     }
 
     return(
@@ -34,38 +18,8 @@ const LoginForm: FunctionComponent = () => {
                     <Typography variant='h5' component='h2'>
                         Log Into Your Account
                     </Typography>
-                    <div>
-                        <TextField
-                            id='outlined-email-input'
-                            label='Email'
-                            type='email'
-                            name='email'
-                            value={credentials.email}
-                            onChange={(e) => handleInputChanges(e)}
-                            autoComplete='email'
-                            margin='normal'
-                            variant='outlined'
-                            InputProps={{
-                                className:'login-input-props'
-                            }}
-                        />
-                    </div>
-                    <div>
-                        <TextField
-                            id='outlined-password-input'
-                            label='Password'
-                            type='password'
-                            name='password'
-                            value={credentials.password}
-                            onChange={(e) => handleInputChanges(e)}
-                            autoComplete='current-password'
-                            margin='normal'
-                            variant='outlined'
-                            InputProps={{
-                                className:'login-input-props'
-                            }}
-                        />
-                    </div>
+                    <Input type='Email'/>
+                    <Input type='Password'/>
                     <div>
                         <Button variant='contained'>
                             Log In
