@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import React, { Component } from 'react'
 
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -13,9 +11,6 @@ class Navbar extends Component {
       <div>
         <AppBar position='static' className='navbar'>
           <Toolbar>
-            <IconButton edge='start' color='inherit' aria-label='menu'>
-              <MenuIcon />
-            </IconButton>
             <Typography variant='h6'>
               Sleek
             </Typography>
