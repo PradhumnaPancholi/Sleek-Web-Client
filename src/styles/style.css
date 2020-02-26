@@ -85,6 +85,17 @@
   background: #AAC7E1 !important;
 }
 
+.message-item {
+  margin: 1%;
+  display: flex;
+}
+
+.user-profile-img {
+  padding-top: 1.5%;
+  margin: 1%;
+  height: 5vh;
+}
+
 /*Shared/common styles*/
 body {
   background-color: #c0c0c0 !important;
